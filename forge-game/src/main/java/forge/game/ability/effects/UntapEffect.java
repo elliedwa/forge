@@ -44,7 +44,7 @@ public class UntapEffect extends SpellAbilityEffect {
     @Override
     public void resolve(SpellAbility sa) {
         final Player activator = sa.getActivatingPlayer();
-        final boolean ETB = sa.hasParam("ETB");
+        final boolean etb = sa.hasParam("ETB");
 
         if (sa.hasParam("UntapUpTo")) {
             untapChoose(sa, false);
@@ -62,12 +62,12 @@ public class UntapEffect extends SpellAbilityEffect {
                 if (tgtC.isInPlay()) {
                     if (tgtC.untap(true)) untapped.add(tgtC);
                 }
-                if (ETB) {
+                if (etb) {
                     // do not fire triggers
                     tgtC.setTapped(false);
                 }
             }
-            if (!untapped.isEmpty() && !ETB) {
+            if (!untapped.isEmpty() && !etb) {
                 final Map<AbilityKey, Object> runParams = AbilityKey.newMap();
                 final Map<Player, CardCollection> map = Maps.newHashMap();
                 map.put(activator, untapped);
