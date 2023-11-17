@@ -57,6 +57,8 @@ public enum CounterEnumType {
 
     BLOODLINE("BLDLN", 224, 44, 44),
 
+    BORE("BORE", 98, 47, 34),
+
     BOUNTY("BOUNT", 255, 158, 0),
 
     BRIBERY("BRIBE", 172, 201, 235),
@@ -108,6 +110,8 @@ public enum CounterEnumType {
     DESPAIR("DESPR", 238, 186, 187),
 
     DEVOTION("DEVOT", 255, 111, 255),
+   
+    DISCOVERY("DISCO", 12, 230, 100),
 
     DIVINITY("DVNTY", 0, 233, 255),
 
